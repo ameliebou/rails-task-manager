@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="title"><%= @task.title %></h1>
+  <p class="details"><em><%= @task.details %></em></p>
+  <p>
+    <% if @task.completed %>
+      <i class="far fa-check-square"></i> This task is completed
+    <% else %>
+      <i class="far fa-square"></i> This task is not completed
+    <% end %>
+  </p>
+  <div class="buttons">
+    <%= link_to "Edit task", edit_path(@task), method: :get, class:"link" %>
+    <br/>
+    <%= link_to "List all tasks", tasks_path, class:"link" %>
+  </div>
+</div>
